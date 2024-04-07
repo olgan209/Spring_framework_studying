@@ -6,6 +6,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+<!--    все что выше это конфигурация которая позволяет использовать spring framework-->
+<!--    если я хочу сказать что бы создали обьект класса TestBean я должна прописать путь к нему-->
 
     <bean id="testBean"
           class="org.example.TestBean">
@@ -13,3 +15,6 @@
     </bean>
 
 </beans>
+
+<!--xml это такой формат который может описать конфигурацию-->
+<!--bean smth like objects-->
