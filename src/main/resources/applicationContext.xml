@@ -10,7 +10,12 @@
 <!--    если я хочу сказать что бы создали обьект класса TestBean я должна прописать путь к нему-->
 
     <bean id="musicBean"
-          class="org.example.ClassicalMusic">
+          class="org.example.RockMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="org.example.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
     </bean>
 
 </beans>
