@@ -9,13 +9,17 @@
 <!--    все что выше это конфигурация которая позволяет использовать spring framework-->
 <!--    если я хочу сказать что бы создали обьект класса TestBean я должна прописать путь к нему-->
 
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
     <bean id="musicBean"
           class="org.example.RockMusic">
     </bean>
 
     <bean id="musicPlayer"
           class="org.example.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="Noa"/>
+        <property name="volume" value="60"/>
     </bean>
 
 </beans>
