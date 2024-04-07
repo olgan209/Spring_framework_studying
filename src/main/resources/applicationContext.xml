@@ -9,9 +9,8 @@
 <!--    все что выше это конфигурация которая позволяет использовать spring framework-->
 <!--    если я хочу сказать что бы создали обьект класса TestBean я должна прописать путь к нему-->
 
-    <bean id="testBean"
-          class="org.example.TestBean">
-        <constructor-arg value="Noa"/>
+    <bean id="musicBean"
+          class="org.example.ClassicalMusic">
     </bean>
 
 </beans>
