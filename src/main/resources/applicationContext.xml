@@ -12,14 +12,17 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="org.example.RockMusic">
+          class="org.example.ClassicalMusic"
+            init-method="doMyInit"
+            destroy-method="doMyDestroy"
+            factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicPlayer"
           class="org.example.MusicPlayer">
         <property name="music" ref="musicBean"/>
-        <property name="name" value="Noa"/>
-        <property name="volume" value="60"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>
